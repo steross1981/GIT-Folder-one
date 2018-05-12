@@ -1,0 +1,16 @@
+import java.util.Random;
+
+public class DeckOfCards {
+	
+	private Card[] deck;
+	private int currentCard;
+	private static final int NUMBER_OF_CARDS = 52;
+	private static final Random randomNumbers = new Random();
+	
+	public DeckOfCards()
+	{
+		String[] faces = { "Ace","Deuce","Three","Four","Five","Six","Seven", "Eight", "Nine", "Ten", "Jack","Queen","King" };
+		String[] suits = {"Hearts","Spades","Clubs","Diamonds"};
+	}
+	
+}

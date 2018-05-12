@@ -1,0 +1,9 @@
+package JavaBookExercises2;
+
+public class SimpleArray {
+
+private final int[] array;
+private int writeIndex;
+
+
+}

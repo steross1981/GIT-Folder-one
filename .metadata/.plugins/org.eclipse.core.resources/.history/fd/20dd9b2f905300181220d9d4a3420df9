@@ -1,0 +1,17 @@
+package BinarySearch;
+
+import java.util.Scanner;
+
+public class BinarySearchTest {
+
+	Scanner input = new Scanner(System.in);
+	int searchInt;
+	int position;
+	
+	BinaryArray searchArray = new BinaryArray(15);
+	System.out.println(searchArray);
+	System.out.print("")
+	
+	
+	
+}

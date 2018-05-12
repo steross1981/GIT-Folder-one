@@ -1,0 +1,12 @@
+package PandCExercise;
+
+public interface Buffer {
+	
+	public void set(int value) throws InterruptedException;
+	
+	public void get() throws InterruptedException;
+	
+		
+	
+
+}

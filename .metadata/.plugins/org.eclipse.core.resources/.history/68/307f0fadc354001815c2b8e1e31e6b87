@@ -1,0 +1,37 @@
+package PandCExercise;
+
+import java.util.Random;
+
+public class Consumer implements Runnable {
+	
+	private static Random generator = new Random();
+	private static final Buffer sharedLocation;
+	
+	public Consumer(Buffer shared)
+	
+	{
+	sharedLocation = shared;	
+	}
+	
+	public void run()
+	{
+		int sum = 0;
+		
+		for (int count = 0; count < 10; count++)
+		{
+			try
+			{
+				Thread.sleep(generator.netInt(3000));
+				sum += sharedLocation.get();
+				System.out.printf("\t\t\t%2d\n",sum);
+			}
+			catch(InterruptedException exception)
+			{
+				exception.printStackTrace();
+			}
+		}
+		System.out.printf("\n%%s %d\n%s\n",
+				"Consumer reads value totaling",sum,"Terminating Consumer");
+	}
+
+}

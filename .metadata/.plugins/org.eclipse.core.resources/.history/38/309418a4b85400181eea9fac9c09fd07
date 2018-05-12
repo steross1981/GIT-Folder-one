@@ -1,0 +1,14 @@
+package JavaBookExercises2;
+
+public class ArrayWriter implements Runnable{
+	
+	private final SimpleArray sharedSimpleArray;
+	private final int startValue;
+
+
+	public void run() {
+		
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package JavaBookExercises2;
+
+public class SharedArrayTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
