@@ -54,10 +54,9 @@ public class Calculator {
 		}
 		/*
 		 * Calculates price for items A if statement evaluates the count. Discount is
-		 * applied If the count is greater than or equal to 3 and the modulus of count /
-		 * 3
+		 * applied If the count is greater than or equal to 3 
 		 */
-		if (countA >= 3 && countA % 3 == 0) {
+		if (countA >= 3 ) {
 
 			costA = (countA * 50) - (countA / 3) * 10;
 
@@ -74,10 +73,9 @@ public class Calculator {
 
 		/*
 		 * calculates price of items B if statement evaluates the count. Discount is
-		 * applied If the count is greater than or equal to 2 and the modulus of count
-		 * divided by 2 is equal to 0
+		 * applied If the count is greater than or equal to 2 
 		 */
-		if (countB >= 2 && countB % 2 == 0) {
+		if (countB >= 2 ) {
 
 			costB += (countB * 35) - ((countB / 2) * 10);
 

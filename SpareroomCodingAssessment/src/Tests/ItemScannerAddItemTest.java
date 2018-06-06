@@ -21,11 +21,12 @@ class ItemScannerAddItemTest {
 		
 		ItemScanner scan = new ItemScanner();
 		
-		scan.addItems(in,itemCodes);
+		scan.addItems(itemCodes);
+	//	System.out.println(itemCodes);
 		
 		
 		
-	assertEquals("Checking The size of list", 1,itemCodes.size());
+	assertEquals("Checking The size of list", 2,itemCodes.size());
 		
 		
 		
