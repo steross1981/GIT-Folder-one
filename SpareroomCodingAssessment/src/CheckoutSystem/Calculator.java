@@ -17,7 +17,7 @@ public class Calculator {
 	private int finalPrice;
 
 	public Calculator(ArrayList<Character> codes) {
-		calculatePrice(codes);
+		
 	}
 
 	// method to calculate the price of the items scanned
@@ -57,7 +57,7 @@ public class Calculator {
 		 * applied If the count is greater than or equal to 3 and the modulus of count /
 		 * 3
 		 */
-		if (countA >= 3 && countA % 2 == 0) {
+		if (countA >= 3 && countA % 3 == 0) {
 
 			costA = (countA * 50) - (countA / 3) * 10;
 
@@ -91,6 +91,7 @@ public class Calculator {
 		// calculates price of items D
 		costD += countD * 12;
 		// calculates final price
+		System.out.println(costA);
 		finalPrice = costA + costB + costC + costD;
 
 	}

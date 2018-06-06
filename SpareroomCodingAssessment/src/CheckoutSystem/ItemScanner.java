@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ItemScanner {
 //char variable to store the value of the item code to be added to array
 	private char code;
+	
 	// boolean used to control the while loop
 	private boolean exit = false;
 	// arraylist to store item codes
@@ -15,6 +16,8 @@ public class ItemScanner {
 	{
 		// call scanItems when a new ItemScanner is create
 		scanItems();
+		Calculator calc = new Calculator(itemCodes);
+		
 	}
 	
 	/* Add Items to an arraylist via user input of values

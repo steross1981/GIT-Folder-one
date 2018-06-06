@@ -2,7 +2,7 @@ package Tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -11,14 +11,16 @@ import org.junit.jupiter.api.Test;
 import CheckoutSystem.ItemScanner;
 
 class CheckItemCodesReturned {
-
+// Tests whether the codes returnd by the getCodes method are correct
 	@Test
+	
 	void test() {
-	Scanner in = new Scanner(System.in);
-
+	
+// Instantiates a new ItemScanner object
  		ItemScanner items = new ItemScanner();
-	assertEquals(Arrays.asList('a','b','c','x'), items.getCodes());	
-	in.close();
+ 		//assert checks whether the values returned are equal to what is defined
+	assertEquals(Arrays.asList('a','b','c','d','x'), items.getCodes());	
+	
 	}
 
 }

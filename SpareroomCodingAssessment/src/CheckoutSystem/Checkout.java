@@ -12,6 +12,7 @@ public class Checkout {
 		ArrayList<Character> codes = itemScan.getCodes();
 		// Instantiates a new Calculator object that calculates the price of the items in the supplied array;
 		Calculator calc = new Calculator(codes);
+		calc.calculatePrice(codes);
 
 		// getCount and getFinalPrice methods of calculator object in order to supply values in printed out info 
 		int countA = calc.getCountA();
