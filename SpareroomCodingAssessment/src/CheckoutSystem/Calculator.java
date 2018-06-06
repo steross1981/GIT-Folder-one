@@ -15,16 +15,15 @@ public class Calculator {
 	private int costD;
 
 	private int finalPrice;
-	private ArrayList<Character> itemCodes;
 
 	public Calculator(ArrayList<Character> codes) {
-		itemCodes = codes;
-
+		calculatePrice(codes);
 	}
-	
 
-	public void calculatePrice() {
-
+	// method to calculate the price of the items scanned
+	public void calculatePrice(ArrayList<Character> itemCodes) {
+		// for loops through the array of item codes and iterates a counter based on the
+		// item code;
 		for (char item : itemCodes) {
 
 			switch (item) {
@@ -47,47 +46,55 @@ public class Calculator {
 			case 'D':
 				countD++;
 				break;
-				default: break;
+			default:
+				break;
 
 			}
 
 		}
+		/*
+		 * Calculates price for items A if statement evaluates the count. Discount is
+		 * applied If the count is greater than or equal to 3 and the modulus of count /
+		 * 3
+		 */
+		if (countA >= 3 && countA % 2 == 0) {
 
-		if (countA >= 3) {
-
-			costA = ((countA * 50) - (countA / 3) * 10);
+			costA = (countA * 50) - (countA / 3) * 10;
 
 		}
 
-		else if (countA > 3) {
-			costA = (countA * 50) - countA;
-
-		}
-
+		/*
+		 * Determines if count is more than 0 and less than 3 then applies normal
+		 * pricing to items
+		 */
 		else if (countA > 0 && countA < 3) {
 			costA = countA * 50;
 
 		}
 
+		/*
+		 * calculates price of items B if statement evaluates the count. Discount is
+		 * applied If the count is greater than or equal to 2 and the modulus of count
+		 * divided by 2 is equal to 0
+		 */
 		if (countB >= 2 && countB % 2 == 0) {
 
 			costB += (countB * 35) - ((countB / 2) * 10);
 
-		} else if (countB > 2) {
-			costB += ((countB * 35) - (countB / 2) * 10);
+			// Determines if count is more than 0 and less than 2 then applies normal
+			// pricing to items
 		} else if (countB > 0 && countB < 2) {
 			costB += 35;
 		}
-
+		// calculates price of items C
 		costC += countC * 25;
+		// calculates price of items D
 		costD += countD * 12;
-
+		// calculates final price
 		finalPrice = costA + costB + costC + costD;
 
 	}
 
-	
-	
 	public int getFinalPrice() {
 		return finalPrice;
 	}

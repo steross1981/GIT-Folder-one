@@ -15,14 +15,17 @@ class ItemScannerAddItemTest {
 	@Test
 	void test() {
 		
-		ArrayList<Character> itemCodes = new ArrayList<Character>();
 		
 		Scanner in = new Scanner(System.in);
+
 		ItemScanner scan = new ItemScanner();
-		scan.addItems(in,itemCodes);
-		System.out.println(itemCodes.size());
+		ArrayList<Character> itemCodes = new ArrayList<Character>();
 		
-	assertEquals("Checking The size of list: ", 1,itemCodes.size());
+		scan.addItems(in,itemCodes);
+		
+		in.close();
+		
+	assertEquals("Checking The size of list: ", 2,itemCodes.size());
 		
 		
 		

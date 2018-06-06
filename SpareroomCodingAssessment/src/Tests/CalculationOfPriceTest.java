@@ -18,7 +18,7 @@ class CalculationOfPriceTest {
 		aList.add('a');
 		aList.add('c');
 		Calculator calcu = new Calculator(aList);
-		calcu.calculatePrice();
+		calcu.calculatePrice(aList);
 		
 		assertEquals(75,calcu.getFinalPrice());
 		
