@@ -1,5 +1,0 @@
-package PandCExercise;
-
-public interface Buffer {
-
-}

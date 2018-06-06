@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 public class SharedBufferTest2 {
 
-	public static void main(String[] args)
+	/*public static void main(String[] args)
 	{
 		ExecutorService application = Executors.newCachedThreadPool();
 		
@@ -17,6 +17,6 @@ public class SharedBufferTest2 {
 		application.execute(new Consumer(sharedLocation));
 		
 		application.shutdown();
-	}
+	}*/
 	
 }
