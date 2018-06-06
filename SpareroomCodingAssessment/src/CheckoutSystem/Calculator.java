@@ -53,8 +53,9 @@ public class Calculator {
 
 		}
 		/*
-		 * Calculates price for items A if statement evaluates the count. Discount is
-		 * applied If the count is greater than or equal to 3 
+		 * Calculates price for items A if statement evaluates the count. Discount  relative to 
+		 * - (countA / 3) * 10
+		 * is applied If the count is greater than or equal to 3 
 		 */
 		
 		if (countA >= 3 ) {
@@ -74,16 +75,18 @@ public class Calculator {
 		}
 
 		/*
-		 * calculates price of items B if statement evaluates the count. Discount is
-		 * applied If the count is greater than or equal to 2 
+		 * calculates price of items B if statement evaluates the count. Discount relative to 
+		 * - (countB / 2) * 10
+		 * is applied If the count is greater than or equal to 2 
 		 */
 		
 		if (countB >= 2 ) {
 
 			costB += (countB * 35) - ((countB / 2) * 10);
 
-			// Determines if count is more than 0 and less than 2 then applies normal
-			// pricing to items
+			/* Determines if count is more than 0 and less than 2 then applies normal
+			 * pricing to items
+			 */
 			
 		} else if (countB > 0 && countB < 2) {
 			costB += 35;

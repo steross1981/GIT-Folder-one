@@ -10,7 +10,9 @@ import CheckoutSystem.Calculator;
 import CheckoutSystem.Item;
 
 class CalculationOfPriceTest {
-// tests the calculatePrice method in the Calculator class, ensures the values returned are correct
+/* tests the calculatePrice method in the Calculator class, ensures the values returned are correct
+ *and that the discount is applied correctly
+ */
 	@Test
 	void test() {
 		

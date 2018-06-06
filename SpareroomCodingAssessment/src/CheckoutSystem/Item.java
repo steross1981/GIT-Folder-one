@@ -22,10 +22,6 @@ public char getCode()
 	return code;
 }
 
-public void setPrice(int itemPrice)
-{
-	price = itemPrice;
-}
 
 public int getPrice(char code)
 {switch (code)
@@ -36,7 +32,7 @@ case 'b': price = 35;
 break;
 case 'c': price = 25;
 break;
-case 'd': price = 15;
+case 'd': price = 12;
 break;
 	}
 	return price;

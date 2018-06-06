@@ -8,6 +8,7 @@ public class Checkout {
 	
 		ItemScanner itemScan = new ItemScanner();
 		itemScan.scanItems();
+		
 		// sets the values in an arraylist equal to that in itemScanner array
 	
 		// Instantiates a new Calculator object that calculates the price of the items in the supplied array;
