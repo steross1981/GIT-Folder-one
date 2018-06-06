@@ -1,18 +1,18 @@
 package CheckoutSystem;
 
-import java.util.ArrayList;
-
 public class Checkout {
 
 	public static void main (String[] args)
 	{
 		// instantiates a new ItemScanner object
+	
 		ItemScanner itemScan = new ItemScanner();
+		itemScan.scanItems();
 		// sets the values in an arraylist equal to that in itemScanner array
-		ArrayList<Character> codes = itemScan.getCodes();
+	
 		// Instantiates a new Calculator object that calculates the price of the items in the supplied array;
-		Calculator calc = new Calculator(codes);
-		calc.calculatePrice(codes);
+		Calculator calc = new Calculator();
+		calc.calculatePrice(itemScan.getCodes());
 
 		// getCount and getFinalPrice methods of calculator object in order to supply values in printed out info 
 		int countA = calc.getCountA();

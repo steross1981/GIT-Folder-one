@@ -18,8 +18,9 @@ class CheckItemCodesReturned {
 	
 // Instantiates a new ItemScanner object
  		ItemScanner items = new ItemScanner();
+ 		items.scanItems();
  		//assert checks whether the values returned are equal to what is defined
-	assertEquals(Arrays.asList('a','b','c','d','x'), items.getCodes());	
+	assertEquals(Arrays.asList('a','b','c','d'), items.getCodes());	
 	
 	}
 

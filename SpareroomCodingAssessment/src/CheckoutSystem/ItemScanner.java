@@ -9,37 +9,39 @@ public class ItemScanner {
 	
 	// boolean used to control the while loop
 	private boolean exit = false;
-	// arraylist to store item codes
-	private ArrayList<Character> itemCodes = new ArrayList<Character>();
-	//constructor
 	private Scanner input = new Scanner(System.in);
+	// arraylist to store item codes
+	private ArrayList<Item> itemCodes = new ArrayList<Item>();
+	//constructor
+	
+
 	public ItemScanner()
 	{
 		// call scanItems when a new ItemScanner is create
-		scanItems();
-		Calculator calc = new Calculator(itemCodes);
 		
+	
+	
 	}
 	
 	/* This code was called repeatedly so I made it a method to add Items to an arraylist via user input of values
 	 * Takes parameters of Scanner to input values and Arraylist to store the values
 	 * */
 	
-	public void addItems(ArrayList<Character> arrayList) {
-		try {
-		itemCodes = arrayList;
+	public void addItems(ArrayList<Item> itm) {
+		Item item = new Item();
+	itemCodes = itm;
 		System.out.println("Please enter Item code. Enter x to quit");
 		// sets the next input character to character variable - code.
+
 		code = input.next().charAt(0);
 		System.out.println(code);
+		item.setCode(code);
+		System.out.println(code);
 		// adds the input character to the arraylist
-		arrayList.add(code);
-		}catch(Exception e)
-	{
-			System.out.println(e.toString());
-	}
+		itm.add(item);
+		}
 	
-	}
+	
 	public void scanItems() {
 	
 	
@@ -83,7 +85,7 @@ public class ItemScanner {
 
 	}
 	
-	public ArrayList<Character> getCodes()
+	public ArrayList<Item> getCodes()
 	{
 		return itemCodes;
 	}

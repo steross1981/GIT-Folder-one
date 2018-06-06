@@ -8,25 +8,27 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 
+import CheckoutSystem.Item;
 import CheckoutSystem.ItemScanner;
 
 class ItemScannerAddItemTest {
-	ArrayList<Character> itemCodes;
+	
 	@Test
 	void test() {
 		
 		
 		
-		Scanner in = new Scanner(System.in);
-		
+			
 		ItemScanner scan = new ItemScanner();
+		ArrayList<Item> items = new ArrayList<Item>();
+	
+		scan.addItems(items);
+	
+	System.out.println(items);
 		
-		scan.addItems(itemCodes);
-	//	System.out.println(itemCodes);
 		
 		
-		
-	assertEquals("Checking The size of list", 2,itemCodes.size());
+	assertEquals("Checking The size of list", 1,items.size());
 		
 		
 		
